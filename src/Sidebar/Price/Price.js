@@ -1,11 +1,38 @@
+
+import Input from '../../components/Input';
 import './Price.css';
-function Price() {
+function Price({handleChange}) {
   return <div className='ml'>
     <h2 className='sidebar-title price-title'>Price</h2>
-    <label className='sidebar-label-container'>
-    <input type='radio' name='test' />
-    <span className='checkmark'></span>All
-  </label>
+    <label className="sidebar-label-container">
+          <input onChange={handleChange} type="radio" value="" name="test2" />
+          <span className="checkmark"></span>All
+        </label>
+ <Input handleChange={handleChange}
+ value = {1000}
+ title = '₹0 - 1000'
+ name = 'test2'
+ />
+  <Input handleChange={handleChange}
+ value = {2000}
+ title = '₹1000 - 2000'
+ name = 'test2'
+ />
+  <Input handleChange={handleChange}
+ value = {4000}
+ title = '₹2000 - 4000'
+ name = 'test2'
+ />
+  <Input handleChange={handleChange}
+ value = {6000}
+ title = '₹4000 - 6000'
+ name = 'test2'
+ />
+  <Input handleChange={handleChange}
+ value = {6000}
+ title = 'Above ₹6000'
+ name = 'test2'
+ />
   </div>
 }
 export default Price;
